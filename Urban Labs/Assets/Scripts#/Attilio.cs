@@ -8,8 +8,8 @@ public class Attilio : MonoBehaviour
     [SerializeField] GameObject buttons;
 
     GameLogic gameLogic;
-    
-   
+
+    bool start = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,12 @@ public class Attilio : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform);
+
+        if (GetDistance() < 2 && !start)
+        {
+            start = true;
+            gameLogic.NextState();
+        }
         if (gameLogic.GetState() == 1)
         {
             buttons.SetActive(true);
@@ -31,11 +37,9 @@ public class Attilio : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public float GetDistance()
     {
-        if (gameLogic.GetState() == 0)
-        {
-            gameLogic.NextState();
-        }
+        float dist = Vector3.Distance(player.transform.position, transform.position);
+        return dist;
     }
 }
