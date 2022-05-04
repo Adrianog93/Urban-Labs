@@ -1122,19 +1122,6 @@ MonoBehaviour:
   testo: {fileID: 123994045}
   risposta1: {fileID: 1401275861}
   risposta2: {fileID: 2040814824}
---- !u!65 &1446089651
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446089647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1714554417
 PrefabInstance:
   m_ObjectHideFlags: 0
