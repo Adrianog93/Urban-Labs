@@ -167,6 +167,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Vetro finestre
+    second: {fileID: 2100000, guid: c3a835cde1e800e4d82c087ab6a36bf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Vinaccia
     second: {fileID: 2100000, guid: 4e347f4e24d53c4448d3bed31507f082, type: 2}
   - first:
