@@ -10,10 +10,12 @@ public class EstintoreScript : MonoBehaviour
     bool canShoot = false;
     Interactable interactable;
     Vector3 startPos;
+    [SerializeField] ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
+        particle.Stop();
     }
 
     // Update is called once per frame
@@ -22,20 +24,20 @@ public class EstintoreScript : MonoBehaviour
         if (interactable.attachedToHand != null)
         {
             SteamVR_Input_Sources source = interactable.attachedToHand.handType;
-            if (fireAction[source].stateDown)
+            if (fireAction[source].state && canShoot)
             {
-                Fire();
+                particle.Play();
+            }
+            else
+            {
+                particle.Stop();
             }
         }
       //  Debug.Log(transform.GetChild(0).childCount);
-        if (transform.childCount==1 && !canShoot)
+        if (transform.childCount==2 && !canShoot)
         {
             canShoot = true;
         }
     }
 
-    public void Fire()
-    {
-        Debug.Log("Fire");
-    }
 }
