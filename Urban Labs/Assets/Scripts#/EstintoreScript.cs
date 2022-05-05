@@ -9,6 +9,7 @@ public class EstintoreScript : MonoBehaviour
     public SteamVR_Action_Boolean fireAction;
     bool canShoot = false;
     Interactable interactable;
+    Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +27,8 @@ public class EstintoreScript : MonoBehaviour
                 Fire();
             }
         }
-
-        if (transform.childCount==1)
+      //  Debug.Log(transform.GetChild(0).childCount);
+        if (transform.childCount==1 && !canShoot)
         {
             canShoot = true;
         }
