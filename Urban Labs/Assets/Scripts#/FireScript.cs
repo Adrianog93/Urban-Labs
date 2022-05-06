@@ -8,6 +8,7 @@ public class FireScript : MonoBehaviour
     GameLogic gameLogic;
     bool startFire = false;
     VisualEffect fire;
+    [SerializeField] float speed = .05f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +32,9 @@ public class FireScript : MonoBehaviour
         if (other.gameObject.tag == "Schiuma")
         {
             Debug.Log("Fuoco");
-            transform.localScale = new Vector3(transform.localScale.x - .1f, transform.localScale.y - .1f, transform.localScale.z - .1f);
-            if (transform.localScale.x < .1f)
+            transform.localScale = new Vector3(transform.localScale.x - speed,
+                transform.localScale.y - speed, transform.localScale.z - speed);
+            if (transform.localScale.x < speed)
             {
                 Destroy(gameObject);
             }
