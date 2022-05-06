@@ -25,4 +25,17 @@ public class FireScript : MonoBehaviour
             fire.Play();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Schiuma")
+        {
+            Debug.Log("Fuoco");
+            transform.localScale = new Vector3(transform.localScale.x - .1f, transform.localScale.y - .1f, transform.localScale.z - .1f);
+            if (transform.localScale.x < .1f)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
