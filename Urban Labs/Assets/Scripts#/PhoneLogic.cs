@@ -6,25 +6,21 @@ using UnityEngine.UI;
 public class PhoneLogic : MonoBehaviour
 {
     [SerializeField] GameObject phoneNumbers;
-    [SerializeField] GameObject textNumbers;
+    [SerializeField] Text textNumbers;
     GameLogic gameLogic;
+    string phoneText = "";
     // Start is called before the first frame update
     void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
+        phoneNumbers.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameLogic.GetState() == 3)
-        {
-            phoneNumbers.SetActive(true);
-        }
-        else
-        {
-            phoneNumbers.SetActive(false);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,18 +28,33 @@ public class PhoneLogic : MonoBehaviour
         if (gameLogic.GetState() == 2)
         {
             gameLogic.NextState();
+            phoneNumbers.SetActive(true);
+
         }
     }
 
     public void CheckNumber()
     {
-        if (textNumbers.GetComponent<Text>().text == "115")
+        if (textNumbers.text.Length == 3)
         {
-            gameLogic.NextState();
+            if (textNumbers.text == "115")
+            {
+                gameLogic.NextState();
+                phoneNumbers.SetActive(false);
+            }
+            else
+            {
+                phoneText = "";
+                textNumbers.text = "";
+            }
         }
-        else
-        {
-            textNumbers.GetComponent<Text>().text = "";
-        }
+        
+    }
+
+    public void AddNumber(string s)
+    {
+        phoneText += s;
+        textNumbers.text = phoneText;
+        CheckNumber();
     }
 }
