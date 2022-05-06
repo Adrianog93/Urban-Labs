@@ -2368,6 +2368,7 @@ GameObject:
   - component: {fileID: 9156572991276950093}
   - component: {fileID: 8689721741822550157}
   - component: {fileID: 8689721741822550159}
+  - component: {fileID: -259493583894171847}
   m_Layer: 3
   m_Name: ATTILIO
   m_TagString: Attilio
@@ -2383,7 +2384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8383870941558470903}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.019, z: 1.45}
+  m_LocalPosition: {x: 0, y: 0, z: 1.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 261907852201063123}
@@ -2434,6 +2435,25 @@ MonoBehaviour:
   testo: {fileID: 8689721740491754624}
   risposta1: {fileID: 8689721741916124904}
   risposta2: {fileID: 8689721742551658453}
+--- !u!95 &-259493583894171847
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383870941558470903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3dd84d090a7341146b1acdb3cbbf0ff5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8478536386018846895
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class EstintoreScript : MonoBehaviour
     Interactable interactable;
     Vector3 startPos;
     [SerializeField] ParticleSystem particle;
+    [SerializeField] CapsuleCollider schiuma;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,12 @@ public class EstintoreScript : MonoBehaviour
             if (fireAction[source].state && canShoot)
             {
                 particle.Play();
+                schiuma.enabled = true;
             }
             else
             {
                 particle.Stop();
+                schiuma.enabled = false;
             }
         }
       //  Debug.Log(transform.GetChild(0).childCount);
