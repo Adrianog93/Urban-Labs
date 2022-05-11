@@ -7,14 +7,14 @@ public class FireScript : MonoBehaviour
 {
     GameLogic gameLogic;
     bool startFire = false;
-    VisualEffect fire;
+    ParticleSystem fire;
     [SerializeField] float speed = .05f;
     // Start is called before the first frame update
     void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
-        fire = GetComponent<VisualEffect>();
-        fire.Stop();
+        fire = GetComponent<ParticleSystem>();
+        fire.enableEmission = false;
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class FireScript : MonoBehaviour
         if (gameLogic.GetState() == 2 && !startFire)
         {
             startFire = true;
+            fire.enableEmission = true;
             fire.Play();
         }
     }
