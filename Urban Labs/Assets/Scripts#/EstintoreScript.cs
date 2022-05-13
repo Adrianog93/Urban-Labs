@@ -2,45 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using Valve.VR.InteractionSystem;
+//using Valve.VR.InteractionSystem;
 
 public class EstintoreScript : MonoBehaviour
 {
-    public SteamVR_Action_Boolean fireAction;
+    
     bool canShoot = false;
-    Interactable interactable;
+    bool haveSecure = true;
+    
     Vector3 startPos;
     [SerializeField] ParticleSystem particle;
-    [SerializeField] CapsuleCollider schiuma;
+   // [SerializeField] CapsuleCollider schiuma;
     // Start is called before the first frame update
     void Start()
     {
-        interactable = GetComponent<Interactable>();
+        //interactable = GetComponent<Interactable>();
         particle.Stop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (interactable.attachedToHand != null)
+        if (canShoot && !haveSecure)
         {
-            SteamVR_Input_Sources source = interactable.attachedToHand.handType;
-            if (fireAction[source].state && canShoot)
-            {
-                particle.Play();
-                schiuma.enabled = true;
-            }
-            else
-            {
-                particle.Stop();
-                schiuma.enabled = false;
-            }
+            particle.Play();
+            // schiuma.enabled = true;
         }
-      //  Debug.Log(transform.GetChild(0).childCount);
-        if (transform.childCount==2 && !canShoot)
+        else
         {
-            canShoot = true;
+            particle.Stop();
+            // schiuma.enabled = false;
         }
+
     }
 
+    public void Fire()
+    {
+        canShoot = true;
+    }
+    
+    public void NotFire()
+    {
+        canShoot = false;
+    }
+
+    public void Secured()
+    {
+        haveSecure = false;
+    }
+
+    
 }
