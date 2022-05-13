@@ -7,6 +7,8 @@ public class Attilio : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject buttons;
 
+    int conversationIndex = 0;
+
     GameLogic gameLogic;
 
     bool start = false;
@@ -45,4 +47,5 @@ public class Attilio : MonoBehaviour
         float dist = Vector3.Distance(player.transform.position, transform.position);
         return dist;
     }
+
 }

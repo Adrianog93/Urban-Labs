@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.VFX;
 //using Valve.VR.InteractionSystem;
 
 public class EstintoreScript : MonoBehaviour
@@ -11,13 +12,14 @@ public class EstintoreScript : MonoBehaviour
     bool haveSecure = true;
     
     Vector3 startPos;
-    [SerializeField] ParticleSystem particle;
-    [SerializeField] CapsuleCollider schiuma;
+   // [SerializeField] ParticleSystem particle;
+    [SerializeField] ParticleSystem schiuma;
     // Start is called before the first frame update
     void Start()
     {
         //interactable = GetComponent<Interactable>();
-        particle.Stop();
+        schiuma.Stop();
+        
     }
 
     // Update is called once per frame
@@ -25,13 +27,14 @@ public class EstintoreScript : MonoBehaviour
     {
         if (canShoot && !haveSecure)
         {
-            particle.Play();
-            schiuma.enabled = true;
+            //particle.Play();
+            schiuma.Play();
+            Debug.Log("AAAA");
         }
         else
         {
-            particle.Stop();
-            schiuma.enabled = false;
+            schiuma.Stop();
+//            schiuma.enabled = false;
         }
 
     }
