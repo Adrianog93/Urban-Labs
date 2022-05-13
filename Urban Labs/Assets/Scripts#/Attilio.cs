@@ -10,18 +10,21 @@ public class Attilio : MonoBehaviour
     GameLogic gameLogic;
 
     bool start = false;
+    Vector3 AttilioRotation;
     // Start is called before the first frame update
     void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
+        AttilioRotation = transform.eulerAngles;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(player.transform);
+        transform.eulerAngles = new Vector3(AttilioRotation.x, transform.eulerAngles.y, AttilioRotation.z);
 
-        if (GetDistance() < 2 && !start)
+        if (GetDistance() < 5 && !start)
         {
             start = true;
             gameLogic.NextState();

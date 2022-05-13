@@ -12,7 +12,7 @@ public class EstintoreScript : MonoBehaviour
     
     Vector3 startPos;
     [SerializeField] ParticleSystem particle;
-   // [SerializeField] CapsuleCollider schiuma;
+    [SerializeField] CapsuleCollider schiuma;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +26,12 @@ public class EstintoreScript : MonoBehaviour
         if (canShoot && !haveSecure)
         {
             particle.Play();
-            // schiuma.enabled = true;
+            schiuma.enabled = true;
         }
         else
         {
             particle.Stop();
-            // schiuma.enabled = false;
+            schiuma.enabled = false;
         }
 
     }
