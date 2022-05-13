@@ -311,6 +311,86 @@
       "name": "/actions/htc_viu/out/viu_vib_01",
       "type": "vibration",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftGrip",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/RightGrip",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/AButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/BButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/XButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/YButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftTrigger",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/RightTrigger",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftTriggerNear",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/RightTriggerNear",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickAxis",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickAxis",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickNear",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickNear",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickDown",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickDown",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/Start",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/Back",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/out/Haptic",
+      "type": "vibration"
     }
   ],
   "action_sets": [
@@ -332,6 +412,10 @@
     },
     {
       "name": "/actions/htc_viu",
+      "usage": "leftright"
+    },
+    {
+      "name": "/actions/VRIF",
       "usage": "leftright"
     }
   ],
@@ -491,9 +575,7 @@
       "/actions/htc_viu/in/viu_axis_4xy": "Axis4 X&Y",
       "/actions/htc_viu/out/viu_vib_01": "Vibration",
       "/actions/htc_viu/in/viu_skeleton_left": "Skeleton (Left)",
-      "/actions/htc_viu/in/viu_skeleton_right": "Skeleton (Right)",
-      "/actions/htc_viu/in/viu_press_36": "Press08 (Joystick)",
-      "/actions/htc_viu/in/viu_touch_36": "Touch08 (Joystick)"
+      "/actions/htc_viu/in/viu_skeleton_right": "Skeleton (Right)"
     }
   ]
 }
