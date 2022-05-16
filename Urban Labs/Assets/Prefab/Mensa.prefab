@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 4353192638480453180}
   - component: {fileID: 5769280868671580360}
   - component: {fileID: 5019904395673311125}
+  - component: {fileID: 550487665}
   m_Layer: 0
   m_Name: Pane
   m_TagString: Untagged
@@ -591,6 +592,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &550487665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950039393476300938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7500057, y: 1.0000042, z: 0.9020081}
+  m_Center: {x: 0.32867372, y: -0.45930597, z: 0.014956695}
 --- !u!1 &4104881184206553441
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +616,7 @@ GameObject:
   - component: {fileID: 5254598077921524512}
   - component: {fileID: 3386792703247970475}
   - component: {fileID: 169690309404389773}
+  - component: {fileID: 972919146}
   m_Layer: 0
   m_Name: Tavolo Vassoi
   m_TagString: Untagged
@@ -675,6 +690,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104881184206553441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04591485, y: 0.020986224, z: 0.114644416}
+  m_Center: {x: -0.034079853, y: 0.000064406915, z: 0.03607183}
 --- !u!1 &4345558511098672799
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +714,13 @@ GameObject:
   - component: {fileID: 7372069101797678608}
   - component: {fileID: 5051096032810047487}
   - component: {fileID: 8122998139997262871}
+  - component: {fileID: 972919147}
+  - component: {fileID: 972919148}
+  - component: {fileID: 972919149}
+  - component: {fileID: 972919150}
+  - component: {fileID: 972919151}
+  - component: {fileID: 972919152}
+  - component: {fileID: 972919153}
   m_Layer: 0
   m_Name: Tavoli
   m_TagString: Untagged
@@ -757,6 +792,97 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14946261, y: 0.14976437, z: 0.08442143}
+  m_Center: {x: -0.19627419, y: -0.44624346, z: 0.042229135}
+--- !u!65 &972919148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15194109, y: 0.15348044, z: 0.08442143}
+  m_Center: {x: 0.0019952378, y: -0.44934025, z: 0.04222913}
+--- !u!65 &972919149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15194024, y: 0.15100053, z: 0.08442143}
+  m_Center: {x: -0.28053856, y: -0.21389036, z: 0.04222913}
+--- !u!65 &972919150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15565841, y: 0.14604326, z: 0.08442143}
+  m_Center: {x: -0.19565427, y: 0.0029680564, z: 0.04222913}
+--- !u!65 &972919151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15194102, y: 0.14976062, z: 0.08442143}
+  m_Center: {x: -0.00048313086, y: 0.0023483976, z: 0.04222913}
+--- !u!65 &972919152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14946255, y: 0.14728437, z: 0.08442143}
+  m_Center: {x: -0.09713934, y: -0.21451023, z: 0.04222913}
+--- !u!65 &972919153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345558511098672799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14306492, y: 0.14976276, z: 0.08442143}
+  m_Center: {x: 0.079544865, y: -0.21574932, z: 0.04222913}
 --- !u!1 &4563088002791888887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1134,7 @@ GameObject:
   - component: {fileID: 3416798079089344062}
   - component: {fileID: 7321029410137004652}
   - component: {fileID: 6726687289561934343}
+  - component: {fileID: 972919158}
   m_Layer: 0
   m_Name: 'Bancone '
   m_TagString: Untagged
@@ -1083,6 +1210,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5101858805635923340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4212325, y: 0.7521153, z: 0.1743749}
+  m_Center: {x: -0.6175247, y: -0.13033573, z: 0.034203608}
 --- !u!1 &5275756373466294004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,6 +1234,7 @@ GameObject:
   - component: {fileID: 8489140011058879397}
   - component: {fileID: 3859946118202814108}
   - component: {fileID: 7755219300575451005}
+  - component: {fileID: 2253738519013036611}
   m_Layer: 0
   m_Name: Soffitto
   m_TagString: Untagged
@@ -1166,6 +1307,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2253738519013036611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275756373466294004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13506587, y: 0.080267005, z: 0.0009967887}
+  m_Center: {x: 0.00006685033, y: -0.0003808233, z: 0.02372762}
 --- !u!1 &5431951465198949279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1331,7 @@ GameObject:
   - component: {fileID: 8613557580262186664}
   - component: {fileID: 2665868785223574714}
   - component: {fileID: 1101428465248868418}
+  - component: {fileID: 972919154}
   m_Layer: 0
   m_Name: Secchio Immondizia
   m_TagString: Untagged
@@ -1250,6 +1405,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431951465198949279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005768341, y: 0.0073553566, z: 0.010516852}
+  m_Center: {x: 0.000000004993309, y: 0.0021329792, z: 0.005258426}
 --- !u!1 &6297904801182619982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1510,8 @@ GameObject:
   - component: {fileID: 669295525075537016}
   - component: {fileID: 559652562219128086}
   - component: {fileID: 3375168103081887444}
+  - component: {fileID: 972919156}
+  - component: {fileID: 972919157}
   m_Layer: 0
   m_Name: Cucina
   m_TagString: Untagged
@@ -1416,6 +1586,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200760335688733918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13797827, y: 0.03171779, z: 0.035955645}
+  m_Center: {x: 0.052681558, y: -0.005858888, z: 0.07131125}
+--- !u!65 &972919157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200760335688733918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13797827, y: 0.03171779, z: 0.036829993}
+  m_Center: {x: 0.05268156, y: -0.0058588884, z: 0.008341504}
 --- !u!1 &7583080171691130221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1704,7 @@ GameObject:
   - component: {fileID: 1946527280766529421}
   - component: {fileID: 2523203534340942271}
   - component: {fileID: 4022250338485765316}
+  - component: {fileID: 972919155}
   m_Layer: 0
   m_Name: Frigorifero
   m_TagString: Untagged
@@ -1579,6 +1776,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &972919155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018150213191926141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020921899, y: 0.040530127, z: 0.020174727}
+  m_Center: {x: -0.0015879443, y: 0.010224889, z: -0.00008214124}
 --- !u!1 &8066544533580266856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1893,8 @@ GameObject:
   - component: {fileID: 3362248415659742574}
   - component: {fileID: 8252029337250829956}
   - component: {fileID: 3660005732612901067}
-  m_Layer: 0
+  - component: {fileID: 675451524}
+  m_Layer: 9
   m_Name: Stanza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,3 +1969,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &675451524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161084613165542040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13510321, y: 0.08437774, z: 0.0008983072}
+  m_Center: {x: 0.000085205334, y: 0.0015203579, z: -0.0003}
