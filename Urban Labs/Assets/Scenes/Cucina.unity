@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EstintoreBody
       objectReference: {fileID: 0}
+    - target: {fileID: 1398306962575332313, guid: 64d1aa6114ff24b4d9c7580d52b86e5f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7919530406037179298, guid: 64d1aa6114ff24b4d9c7580d52b86e5f, type: 3}
       propertyPath: m_RootOrder
       value: 8

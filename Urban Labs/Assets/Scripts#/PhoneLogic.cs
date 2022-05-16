@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR;
 
 public class PhoneLogic : MonoBehaviour
 {
@@ -9,12 +10,15 @@ public class PhoneLogic : MonoBehaviour
     [SerializeField] Text textNumbers;
     GameLogic gameLogic;
     string phoneText = "";
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
         phoneNumbers.SetActive(false);
-
+        Debug.Log(SteamVR.instance.hmd_Type);
     }
 
     // Update is called once per frame
