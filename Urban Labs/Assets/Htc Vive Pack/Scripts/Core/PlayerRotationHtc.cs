@@ -94,8 +94,8 @@ namespace BNG {
             //if (ToggleHandsInput.GetDown())
             //{
 
-            //}
-            // Check Raw Input
+            //}///////////////////////////////////////////////////////////////////////////////////////
+            // Check Raw Input FOR HTC VIVE
             if (inputAxis != null && ToggleHandsInput.GetDown()) {
                 for (int i = 0; i < inputAxis.Count; i++) {
                     float axisVal = InputBridge.Instance.GetInputAxisValue(inputAxis[i]).x;

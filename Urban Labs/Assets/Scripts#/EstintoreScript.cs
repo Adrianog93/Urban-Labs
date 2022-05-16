@@ -29,7 +29,6 @@ public class EstintoreScript : MonoBehaviour
         {
             //particle.Play();
             schiuma.Play();
-            Debug.Log("AAAA");
         }
         else
         {
