@@ -117,7 +117,7 @@ public class MassaggioCardiaco : MonoBehaviour
         }
         if (other.gameObject.name == "Chest" && ObjVelocity.y < -1f && canPunch)
         {
-            if (logic.State == 1)
+            if (logic.State == 4)
             {
                 punchCount++;
                 if (punchCount >= 3)

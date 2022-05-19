@@ -9,14 +9,31 @@ public class TapisRullantUI : MonoBehaviour
     [SerializeField] Text inclineText;
 
     [SerializeField] GameObject playButton;
+    [SerializeField] GameObject UIButtons;
+ 
+    PalestraLogic logic;
 
     int speedValue = 0;
     int inclineValue = 0;
     // Start is called before the first frame update
     void Start()
     {
+        logic = FindObjectOfType<PalestraLogic>();
         playButton.SetActive(false);
+        UIButtons.SetActive(false);
         UpdateText();
+    }
+
+    private void Update()
+    {
+        if (logic.State == 2)
+        {
+            UIButtons.SetActive(true);
+        }
+        else
+        {
+            UIButtons.SetActive(false);
+        }
     }
 
     private void UpdateText()
@@ -71,5 +88,10 @@ public class TapisRullantUI : MonoBehaviour
     {
         inclineValue--;
         UpdateText();
+    }
+
+    public void NextState()
+    {
+        logic.NextState();
     }
 }
