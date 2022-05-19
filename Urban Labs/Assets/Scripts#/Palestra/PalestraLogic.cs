@@ -26,4 +26,9 @@ public class PalestraLogic : MonoBehaviour
     {
         state++;
     }
+
+    public void Test()
+    {
+        Debug.Log("AAA");
+    }
 }
