@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class TapisRullantUI : MonoBehaviour
+{
+    [SerializeField] Text speedText;
+    [SerializeField] Text inclineText;
+
+    [SerializeField] GameObject playButton;
+
+    int speedValue = 0;
+    int inclineValue = 0;
+    // Start is called before the first frame update
+    void Start()
+    {
+        playButton.SetActive(false);
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        if (speedValue > 8)
+        {
+            speedValue = 8;
+        }
+        if (speedValue < 0)
+        {
+            speedValue = 0;
+        }
+        if (inclineValue > 8)
+        {
+            inclineValue = 8;
+        }
+        if (inclineValue < 0)
+        {
+            inclineValue = 0;
+        }
+        speedText.text = speedValue.ToString();
+        inclineText.text = inclineValue.ToString();
+        if (speedValue>0 && inclineValue>0)
+        {
+            playButton.SetActive(true);
+        }
+        else
+        {
+            playButton.SetActive(false);
+        }
+    }
+
+    // Update is called once per frame
+    
+
+    public void PlusSpeed()
+    {
+        speedValue++;
+        UpdateText();
+    }
+    public void PlusIncline()
+    {
+        inclineValue++;
+        UpdateText();
+    }
+    public void MinusSpeed()
+    {
+        speedValue--;
+        UpdateText();
+    }
+    public void MinusIncline()
+    {
+        inclineValue--;
+        UpdateText();
+    }
+}

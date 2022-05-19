@@ -26,4 +26,5 @@ public class PalestraLogic : MonoBehaviour
     {
         state++;
     }
+
 }
