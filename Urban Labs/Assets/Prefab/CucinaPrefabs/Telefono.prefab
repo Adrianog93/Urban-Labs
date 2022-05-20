@@ -629,6 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phoneNumbers: {fileID: 4564270908752975516}
   textNumbers: {fileID: 1906022738769222965}
+  frase: {fileID: 0}
 --- !u!1 &4564270908752975516
 GameObject:
   m_ObjectHideFlags: 0

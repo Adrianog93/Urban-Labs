@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0076960195, y: 0.0033114678, z: 0.0059375996}
-  m_Center: {x: -0.0008579328, y: 0.00019211645, z: 0.0004248601}
+  m_Size: {x: 0.007, y: 0.004, z: 0.009}
+  m_Center: {x: -0.0008579328, y: 0.00019211645, z: -0.0005}
 --- !u!114 &1398306962575332311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.005468591
+  m_Radius: 0.008
   m_Height: 0.03148265
   m_Direction: 2
   m_Center: {x: 0.0050622337, y: -0.00018458141, z: -0.020688513}
@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425221876859355786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0053999997, y: -0.0003759289, z: 0}
+  m_LocalPosition: {x: 0.0053999997, y: -0.0003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7919530406037179298}
@@ -416,8 +416,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0025396126, y: 0.0020021475, z: 0.0018924085}
-  m_Center: {x: -0.0006238328, y: -0.0017382437, z: -0.00048812656}
+  m_Size: {x: 0.0025396126, y: 0.0023728663, z: 0.002262118}
+  m_Center: {x: -0.0006238328, y: -0.0019236057, z: -0.00050039444}
 --- !u!114 &3425221876859355785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 10
   m_CollisionDetection: 3
 --- !u!1 &6726902550853364416
 GameObject:
@@ -800,7 +800,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 50
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1487,7 +1487,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -1498,9 +1498,9 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 0.49230957
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -1509,7 +1509,7 @@ ParticleSystem:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -5345,7 +5345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8979783673892632688}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.00045, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0204, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7919530406037179298}
@@ -5362,6 +5362,6 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.01
-  m_Height: 0.09
+  m_Height: 0.15
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.06}

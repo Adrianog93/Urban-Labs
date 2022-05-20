@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 816d73ef9c3a0d64c98096d469c7d053
+guid: 779766bc3e8290c4286baff33c64bec7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7808616414790633487
-    second: DAMANDA_2_0
+      213: -5605541263967465398
+    second: RISP_D_4_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DAMANDA_2_0
+      name: RISP_D_4_0
       rect:
         serializedVersion: 2
-        x: 305
-        y: 542
-        width: 1419
-        height: 604
+        x: 310
+        y: 280
+        width: 666
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0841e6e147cd5c60800000000000000
-      internalID: 7808616414790633487
+      spriteID: a40dc6b7bed1532b0800000000000000
+      internalID: -5605541263967465398
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 63f141a5fbd09b74eb42f2c35c8d792d
     internalID: 0
     vertices: []
     indices: 

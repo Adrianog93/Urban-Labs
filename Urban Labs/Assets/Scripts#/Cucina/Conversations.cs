@@ -17,7 +17,6 @@ public class Conversations : MonoBehaviour
     [SerializeField] Image risposta3;
     [SerializeField] Image risposta4;
 
-
     GameLogic gameLogic;
 
     int convIndex = 0;
@@ -30,10 +29,14 @@ public class Conversations : MonoBehaviour
     public void UpdateConversation()
     {
         testo.sprite = testi[convIndex];
-        risposta1.sprite = risposte1[convIndex];
-        risposta2.sprite = risposte2[convIndex];
-        risposta3.sprite = risposte3[convIndex];
-        risposta4.sprite = risposte4[convIndex];
+        if (convIndex < risposte1.Length)
+        {
+            risposta1.sprite = risposte1[convIndex];
+            risposta2.sprite = risposte2[convIndex];
+            risposta3.sprite = risposte3[convIndex];
+            risposta4.sprite = risposte4[convIndex];
+        }
+        
     }
 
     public void Next()

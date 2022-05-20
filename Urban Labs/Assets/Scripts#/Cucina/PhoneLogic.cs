@@ -8,6 +8,7 @@ public class PhoneLogic : MonoBehaviour
 {
     [SerializeField] GameObject phoneNumbers;
     [SerializeField] Text textNumbers;
+    [SerializeField] GameObject frase;
     GameLogic gameLogic;
     string phoneText = "";
 
@@ -45,6 +46,7 @@ public class PhoneLogic : MonoBehaviour
             {
                 gameLogic.NextState();
                 phoneNumbers.SetActive(false);
+                frase.SetActive(false);
             }
             else
             {
