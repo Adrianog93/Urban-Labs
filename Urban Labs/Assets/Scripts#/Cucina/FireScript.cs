@@ -42,7 +42,7 @@ public class FireScript : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Schiuma")
+        if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2)
         {
 
             Debug.Log("Fuoco");

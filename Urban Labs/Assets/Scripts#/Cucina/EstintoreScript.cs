@@ -26,6 +26,7 @@ public class EstintoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FixPosition();
         if (canShoot && !haveSecure)
         {
             //particle.Play();
@@ -41,7 +42,10 @@ public class EstintoreScript : MonoBehaviour
     public void Fire()
     {
         canShoot = true;
-        estAudio.Play();
+        if (!haveSecure)
+        {
+            estAudio.Play();
+        }
 
     }
 
@@ -55,6 +59,42 @@ public class EstintoreScript : MonoBehaviour
     public void Secured()
     {
         haveSecure = false;
+    }
+
+    public void FixPosition()
+    {
+        if (transform.position.x > 8.4f)
+        {
+            transform.position = new Vector3(8.4f,
+                transform.position.y, transform.position.z);
+        }
+        if (transform.position.x < -7.7f)
+        {
+            transform.position = new Vector3(-7.7f,
+                transform.position.y, transform.position.z);
+        }
+        if (transform.position.y > 3)
+        {
+            transform.position = new Vector3(transform.position.x,
+                3, transform.position.z);
+        }
+        if (transform.position.y < .1f)
+        {
+            transform.position = new Vector3(transform.position.x,
+                .3f, transform.position.z);
+        }
+        if (transform.position.z > 4.75f)
+        {
+            transform.position = new Vector3(transform.position.x,
+                transform.position.y, 4.75f);
+        }
+        if (transform.position.z < -4.75f)
+        {
+            transform.position = new Vector3(transform.position.x,
+                transform.position.y, -4.75f);
+        }
+
+
     }
 
     
