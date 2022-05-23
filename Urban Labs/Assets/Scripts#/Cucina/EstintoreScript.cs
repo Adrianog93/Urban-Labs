@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 
 public class EstintoreScript : MonoBehaviour
 {
-    
+    AudioSource audio;
     bool canShoot = false;
     bool haveSecure = true;
     
@@ -19,7 +19,8 @@ public class EstintoreScript : MonoBehaviour
     {
         //interactable = GetComponent<Interactable>();
         schiuma.Stop();
-        
+        audio = GetComponent<AudioSource>();
+        audio.Stop();
     }
 
     // Update is called once per frame
@@ -29,11 +30,12 @@ public class EstintoreScript : MonoBehaviour
         {
             //particle.Play();
             schiuma.Play();
+            audio.Play();
         }
         else
         {
             schiuma.Stop();
-//            schiuma.enabled = false;
+            audio.Stop();
         }
 
     }

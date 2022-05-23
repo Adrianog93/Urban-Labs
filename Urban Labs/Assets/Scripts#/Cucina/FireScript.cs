@@ -8,12 +8,15 @@ public class FireScript : MonoBehaviour
     GameLogic gameLogic;
     bool startFire = false;
     ParticleSystem fire;
+    AudioSource audio;
     [SerializeField] float speed = .01f;
 
     BoxCollider boxColl;
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+        audio.Stop();
         boxColl = GetComponent<BoxCollider>();
         gameLogic = FindObjectOfType<GameLogic>();
         fire = GetComponent<ParticleSystem>();
@@ -28,6 +31,7 @@ public class FireScript : MonoBehaviour
             startFire = true;
             fire.enableEmission = true;
             fire.Play();
+            audio.Play();
         }
     }
 
