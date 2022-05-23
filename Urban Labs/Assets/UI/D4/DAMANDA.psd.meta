@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f34eb3a1a24829e4ebeeb034594b5553
+guid: 5cdbffa733558164d8bfe9b714c30f2d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -780928249837057093
-    second: DAMANDA_4_0
+      213: 695879380949809268
+    second: DAMANDA_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DAMANDA_4_0
+      name: DAMANDA_0
       rect:
         serializedVersion: 2
         x: 305
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb0561f4e59925f0800000000000000
-      internalID: -780928249837057093
+      spriteID: 478380c2c9248a900800000000000000
+      internalID: 695879380949809268
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e7eec1a5e9875da428b3ce48a185b23e
+    spriteID: 783abe62a770b0540b9739898efa8f00
     internalID: 0
     vertices: []
     indices: 
@@ -138,7 +138,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -27,4 +27,9 @@ public class GameLogic : MonoBehaviour
     {
         return state;
     }
+    public int State
+    {
+        get => state;
+    }
+
 }

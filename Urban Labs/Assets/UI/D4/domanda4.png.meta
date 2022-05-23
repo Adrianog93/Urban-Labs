@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3df41737fdb1a4141aeec22939b6b38a
+guid: 9e99581b36f03054897e06613fd5f40e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 307619000398912742
-    second: DAMANDA_1_0
+      213: 628255960368805501
+    second: domanda4_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DAMANDA_1_0
+      name: domanda4_0
       rect:
         serializedVersion: 2
         x: 305
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ec10fcd9d1e44400800000000000000
-      internalID: 307619000398912742
+      spriteID: d76fdc1a77308b800800000000000000
+      internalID: 628255960368805501
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2dc0af5ca06236b459e467aa610b8906
+    spriteID: 7084c6f7e8c1a0341971d8d819b92e9e
     internalID: 0
     vertices: []
     indices: 

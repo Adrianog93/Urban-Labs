@@ -109,8 +109,8 @@ TextureImporter:
       name: RISP_B_3_0
       rect:
         serializedVersion: 2
-        x: 1057
-        y: 277
+        x: 310
+        y: 280
         width: 666
         height: 221
       alignment: 0
@@ -129,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a92c71e1c0784244bb637ec557d0e432
+    spriteID: 90342be10a8750a40b5249c6c864e323
     internalID: 0
     vertices: []
     indices: 

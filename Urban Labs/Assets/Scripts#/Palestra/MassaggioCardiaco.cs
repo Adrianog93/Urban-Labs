@@ -12,7 +12,7 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject rightAnchor;
     [SerializeField] GameObject leftAnchor;
 
-    PalestraLogic logic;
+    GameLogic logic;
 
 
     bool isAngle = false;
@@ -34,7 +34,7 @@ public class MassaggioCardiaco : MonoBehaviour
         myCollider = GetComponent<SphereCollider>();
         PrevPos = transform.position;
         NewPos = transform.position;
-        logic = FindObjectOfType<PalestraLogic>();
+        logic = FindObjectOfType<GameLogic>();
     }
     private void FixedUpdate()
     {
@@ -117,7 +117,7 @@ public class MassaggioCardiaco : MonoBehaviour
         }
         if (other.gameObject.name == "Chest" && ObjVelocity.y < -1f && canPunch)
         {
-            if (logic.State == 1)
+            if (logic.State == 4)
             {
                 punchCount++;
                 if (punchCount >= 3)

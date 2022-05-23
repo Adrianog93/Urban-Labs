@@ -6,8 +6,7 @@ public class Attilio : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject buttons;
-
-    int conversationIndex = 0;
+    [SerializeField] GameObject choices;
 
     GameLogic gameLogic;
 
@@ -34,10 +33,11 @@ public class Attilio : MonoBehaviour
         if (gameLogic.GetState() == 1)
         {
             buttons.SetActive(true);
+            choices.SetActive(true);
         }
         else
         {
-            buttons.SetActive(false);
+            choices.SetActive(false);
         }
 
     }
