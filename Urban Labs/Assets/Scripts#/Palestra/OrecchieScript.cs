@@ -5,12 +5,14 @@ using UnityEngine;
 public class OrecchieScript : MonoBehaviour
 {
     CapsuleCollider orecchieCollider;
-    PalestraLogic logic;
+    GameLogic logic;
+    AttilioMorto attilio;
     // Start is called before the first frame update
     void Start()
     {
         orecchieCollider = GetComponent<CapsuleCollider>();
-        logic = FindObjectOfType<PalestraLogic>();
+        logic = FindObjectOfType<GameLogic>();
+        attilio = FindObjectOfType<AttilioMorto>();
     }
 
     // Update is called once per frame
@@ -22,9 +24,9 @@ public class OrecchieScript : MonoBehaviour
     {
         if (other.gameObject.name == "audio")
         {
-            if (logic.State == 0)
+            if (logic.State == 4)
             {
-                logic.NextState();
+                attilio.CheckBreath();
             }
         }
     }
