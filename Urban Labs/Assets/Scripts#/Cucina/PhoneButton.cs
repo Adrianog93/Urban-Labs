@@ -7,9 +7,11 @@ public class PhoneButton : MonoBehaviour
     [SerializeField] string num;
 
     PhoneLogic phoneLogic;
+    AudioSource buttonAudio;
 
     private void Start()
     {
+        buttonAudio = GetComponent<AudioSource>();
         phoneLogic = FindObjectOfType<PhoneLogic>();
     }
     // Start is called before the first frame update
@@ -17,4 +19,11 @@ public class PhoneButton : MonoBehaviour
     {
         phoneLogic.AddNumber(num);
     }
+
+    public void PlayButton()
+    {
+        buttonAudio.Play();
+    }
+
+
 }

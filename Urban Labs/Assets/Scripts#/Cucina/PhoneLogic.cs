@@ -9,6 +9,11 @@ public class PhoneLogic : MonoBehaviour
     [SerializeField] GameObject phoneNumbers;
     [SerializeField] Text textNumbers;
     [SerializeField] GameObject frase;
+
+    [SerializeField] AudioClip audioSbagliato;
+    [SerializeField] AudioClip audio115;
+
+    AudioSource audioTelefono;
     GameLogic gameLogic;
     string phoneText = "";
 
@@ -17,6 +22,7 @@ public class PhoneLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioTelefono = GetComponent<AudioSource>();
         gameLogic = FindObjectOfType<GameLogic>();
         phoneNumbers.SetActive(false);
         Debug.Log(SteamVR.instance.hmd_Type);
@@ -47,11 +53,15 @@ public class PhoneLogic : MonoBehaviour
                 gameLogic.NextState();
                 phoneNumbers.SetActive(false);
                 frase.SetActive(false);
+                audioTelefono.clip = audio115;
+                audioTelefono.Play();
             }
             else
             {
                 phoneText = "";
                 textNumbers.text = "";
+                audioTelefono.clip = audioSbagliato;
+                audioTelefono.Play();
             }
         }
         
