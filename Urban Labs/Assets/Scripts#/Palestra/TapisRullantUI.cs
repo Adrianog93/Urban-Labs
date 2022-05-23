@@ -27,7 +27,7 @@ public class TapisRullantUI : MonoBehaviour
 
     private void Update()
     {
-        if (logic.State == 0)
+        if (logic.State == 2)
         {
             UIButtons.SetActive(true);
         }
@@ -101,6 +101,9 @@ public class TapisRullantUI : MonoBehaviour
 
     public void NextState()
     {
-        logic.NextState();
+        if (logic.State == 3)
+        {
+            logic.NextState();
+        }
     }
 }
