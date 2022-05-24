@@ -7,7 +7,6 @@ public class AttilioMorto : MonoBehaviour
     [SerializeField] GameObject attilio;
     [SerializeField] GameObject pt;
     [SerializeField] SkinnedMeshRenderer mouthBlend;
-    [SerializeField] SkinnedMeshRenderer teethBlend;
 
     GameLogic logic;
     bool mouthCheck = false;
@@ -16,16 +15,17 @@ public class AttilioMorto : MonoBehaviour
     void Start()
     {
         logic = FindObjectOfType<GameLogic>();
+        attilio.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (logic.State == 4 && !mouthCheck)
+        if (logic.State == 3 && !mouthCheck)
         {
             attilio.SetActive(true);
             pt.SetActive(false);
-        }else if(logic.State == 4 && mouthCheck && breathCheck){
+        }else if(logic.State == 3 && mouthCheck && breathCheck){
             logic.NextState();
         }
     }
@@ -52,9 +52,8 @@ public class AttilioMorto : MonoBehaviour
 
     /* 1 ti avvicini
      * 2 finisci di parlare
-     * 3 inizi il tapis
-     * 4 finisci il tapis
-     * 5 apri la bocca e controlli il respiro
-     * 6 massaggio
+     * 3 finisci il tapis
+     * 4 apri la bocca e controlli il respiro
+     * 5 massaggio
      */
 }
