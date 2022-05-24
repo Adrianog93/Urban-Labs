@@ -50,6 +50,6 @@ public class Conversations : MonoBehaviour
         {
             UpdateConversation();
         }
-        Debug.Log(convIndex);
+       // Debug.Log(convIndex);
     }
 }

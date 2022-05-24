@@ -713,6 +713,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3165472505434009774, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165472505434009774, guid: 2af1d2045149fe743b81bc4d1a6f8406, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.010170881
       objectReference: {fileID: 0}

@@ -35,14 +35,14 @@ public class TapisRullantUI : MonoBehaviour
         {
             UIButtons.SetActive(false);
         }
-        if (logic.State == 3)
-        {
-            secondUI.SetActive(true);
-        }
-        else
-        {
-            secondUI.SetActive(false);
-        }
+        //if (logic.State == 3)
+        //{
+        //    secondUI.SetActive(true);
+        //}
+        //else
+        //{
+        //    secondUI.SetActive(false);
+        //}
     }
 
     private void UpdateText()
@@ -101,9 +101,14 @@ public class TapisRullantUI : MonoBehaviour
 
     public void NextState()
     {
-        if (logic.State == 3)
+        if (logic.State == 2)
         {
             logic.NextState();
         }
+    }
+
+    public void PlayButton()
+    {
+        secondUI.SetActive(true);
     }
 }
