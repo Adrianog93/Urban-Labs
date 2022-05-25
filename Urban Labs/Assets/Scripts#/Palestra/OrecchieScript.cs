@@ -24,7 +24,7 @@ public class OrecchieScript : MonoBehaviour
     {
         if (other.gameObject.name == "audio")
         {
-            if (logic.State == 4)
+            if (logic.State == 3)
             {
                 attilio.CheckBreath();
             }
