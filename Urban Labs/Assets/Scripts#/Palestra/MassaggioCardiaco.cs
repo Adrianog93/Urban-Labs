@@ -111,7 +111,7 @@ public class MassaggioCardiaco : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "RightPosition")
+        if (other.gameObject.name == "Grabber")
         {
             isPos = true;
         }

@@ -5,13 +5,16 @@ using UnityEngine.VFX;
 
 public class FireScript : MonoBehaviour
 {
+    [SerializeField] GameObject firstConversation;
+    [SerializeField] GameObject secondConversation;
+    [SerializeField] float speed = .01f;
+
     GameLogic gameLogic;
     bool startFire = false;
     ParticleSystem fire;
     AudioSource audio;
     EstintoreScript estintore;
-    [SerializeField] float speed = .01f;
-
+    
     BoxCollider boxColl;
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,8 @@ public class FireScript : MonoBehaviour
             if (transform.localScale.x < speed)
             {
                 Destroy(gameObject);
+                firstConversation.SetActive(false);
+                secondConversation.SetActive(true);
             }
         }
     }
