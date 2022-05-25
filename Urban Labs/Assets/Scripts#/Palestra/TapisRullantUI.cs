@@ -104,6 +104,7 @@ public class TapisRullantUI : MonoBehaviour
         if (logic.State == 2)
         {
             logic.NextState();
+            secondUI.SetActive(false);
         }
     }
 

@@ -41,6 +41,8 @@ namespace BNG {
             //if (other.GetComponent<UITrigger>() != null || other.GetComponent<Grabber>() != null) {
             if (other.GetComponent<UITrigger>() != null) {
                 itemsInTrigger++;
+                InputBridge.Instance.VibrateController(10, 10, .1f, ControllerHand.Left);
+                InputBridge.Instance.VibrateController(10, 10, .1f, ControllerHand.Right);
             }
         }
 
