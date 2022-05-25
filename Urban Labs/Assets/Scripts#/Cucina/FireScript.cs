@@ -9,12 +9,14 @@ public class FireScript : MonoBehaviour
     bool startFire = false;
     ParticleSystem fire;
     AudioSource audio;
+    EstintoreScript estintore;
     [SerializeField] float speed = .01f;
 
     BoxCollider boxColl;
     // Start is called before the first frame update
     void Start()
     {
+        estintore = FindObjectOfType<EstintoreScript>();
         audio = GetComponent<AudioSource>();
         audio.Stop();
         boxColl = GetComponent<BoxCollider>();
@@ -42,7 +44,7 @@ public class FireScript : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2)
+        if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2 && !estintore.HaveSecure)
         {
 
             Debug.Log("Fuoco");

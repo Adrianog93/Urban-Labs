@@ -61,6 +61,11 @@ public class EstintoreScript : MonoBehaviour
         haveSecure = false;
     }
 
+    public bool HaveSecure
+    {
+        get => haveSecure;
+    }
+
     public void FixPosition()
     {
         if (transform.position.x > 8.4f)
