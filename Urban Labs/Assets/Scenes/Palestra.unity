@@ -194,6 +194,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2090678433}
+    - target: {fileID: 8579141246801177926, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
+      propertyPath: testi.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579141246801177926, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
+      propertyPath: risposte1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579141246801177926, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
+      propertyPath: risposte2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579141246801177926, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
+      propertyPath: risposte3.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579141246801177926, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
+      propertyPath: risposte4.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8921158430675301694, guid: 01c6b0a1202995044bd54f3e9617373e, type: 3}
       propertyPath: m_Name
       value: ATTILIO PT

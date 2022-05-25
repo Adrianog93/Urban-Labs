@@ -12,6 +12,9 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject rightAnchor;
     [SerializeField] GameObject leftAnchor;
 
+    [SerializeField] AudioSource hitSFX;
+
+
     GameLogic logic;
 
 
@@ -119,6 +122,9 @@ public class MassaggioCardiaco : MonoBehaviour
         {
             if (logic.State == 4)
             {
+                hitSFX.Play();
+                InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Right);
+                InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Left);
                 punchCount++;
                 if (punchCount >= 3)
                 {
