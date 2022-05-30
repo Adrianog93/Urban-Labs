@@ -11,6 +11,7 @@ public class TapisRullantUI : MonoBehaviour
     [SerializeField] GameObject playButton;
     [SerializeField] GameObject UIButtons;
     [SerializeField] GameObject secondUI;
+    [SerializeField] GameObject instructionUI;
  
     GameLogic logic;
 
@@ -105,6 +106,7 @@ public class TapisRullantUI : MonoBehaviour
         {
             logic.NextState();
             secondUI.SetActive(false);
+            instructionUI.SetActive(true);
         }
     }
 

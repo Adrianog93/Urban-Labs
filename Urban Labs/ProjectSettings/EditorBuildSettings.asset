@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: b0b237964e734294596b54fae25a3ff4
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen 1.unity
+    guid: 6da647ffdb9e8364eb30b704c328948d
+  - enabled: 0
     path: Assets/Scenes/Cucina.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Palestra.unity
+    guid: 2971cc1fead6b894096514aea24e5ba8
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f992b5db430060d4eaed3259524a2fc1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: aa283eb6074e162469a152ca3e0a1688, type: 2}

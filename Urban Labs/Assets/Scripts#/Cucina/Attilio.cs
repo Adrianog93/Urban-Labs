@@ -25,7 +25,7 @@ public class Attilio : MonoBehaviour
         transform.LookAt(player.transform);
         transform.eulerAngles = new Vector3(AttilioRotation.x, transform.eulerAngles.y, AttilioRotation.z);
 
-        if (GetDistance() < 5 && !start)
+        if (GetDistance() < 3 && !start)
         {
             start = true;
             gameLogic.NextState();
