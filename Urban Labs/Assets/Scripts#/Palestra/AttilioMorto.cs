@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AttilioMorto : MonoBehaviour
 {
     [SerializeField] GameObject attilio;
     [SerializeField] GameObject pt;
     [SerializeField] SkinnedMeshRenderer mouthBlend;
+    [SerializeField] TMP_Text instructionText;
+
+    Vector3 position0;
+    Vector3 position1;
+    [SerializeField] GameObject head;
 
     GameLogic logic;
     bool mouthCheck = false;
@@ -14,6 +20,8 @@ public class AttilioMorto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       // position0 = transform.localRotation;
+        position1 = new Vector3(position0.x, position0.y + 50, position0.z);
         logic = FindObjectOfType<GameLogic>();
         attilio.SetActive(false);
     }
@@ -43,11 +51,23 @@ public class AttilioMorto : MonoBehaviour
     public void CheckMouth()
     {
         mouthCheck = true;
+        instructionText.text = "Ora controlla che stia respirando ancora!";
     }
 
     public void CheckBreath()
     {
-        breathCheck = true;
+        if (mouthCheck)
+        {
+            breathCheck = true;
+            instructionText.text = "Bene adesso fai un massaggio cardiaco";
+        }
+    }
+
+    public void RotateHead(float value)
+    {
+        Debug.Log(value);
+        head.transform.localEulerAngles = Vector3.Lerp(position0, position1, value);
+        
     }
 
     /* 1 ti avvicini

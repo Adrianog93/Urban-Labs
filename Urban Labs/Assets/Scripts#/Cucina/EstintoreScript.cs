@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Valve.VR;
 using UnityEngine.VFX;
 //using Valve.VR.InteractionSystem;
 
 public class EstintoreScript : MonoBehaviour
 {
+    [SerializeField] CanvasGroup messageUI;
     AudioSource estAudio;
     bool canShoot = false;
     bool haveSecure = true;
+
+    float timer = 0;
     
     Vector3 startPos;
    // [SerializeField] ParticleSystem particle;
@@ -26,6 +30,7 @@ public class EstintoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ChangeAlpha();
         FixPosition();
         if (canShoot && !haveSecure)
         {
@@ -45,6 +50,10 @@ public class EstintoreScript : MonoBehaviour
         if (!haveSecure)
         {
             estAudio.Play();
+        }
+        else
+        {
+            NewAlpha();
         }
 
     }
@@ -100,6 +109,21 @@ public class EstintoreScript : MonoBehaviour
         }
 
 
+    }
+
+    public void ChangeAlpha()
+    {
+        timer -= Time.deltaTime;
+        if (timer<0 && messageUI.alpha > 0)
+        {
+            messageUI.alpha -= 0.01f;
+        }
+    }
+
+    public void NewAlpha()
+    {
+        timer = 3;
+        messageUI.alpha = 1;
     }
 
     

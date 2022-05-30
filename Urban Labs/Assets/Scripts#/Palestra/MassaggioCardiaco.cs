@@ -4,6 +4,7 @@ using UnityEngine;
 using Valve.VR;
 using UnityEngine.InputSystem;
 using BNG;
+using TMPro;
 
 public class MassaggioCardiaco : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject leftHandClosed;
     [SerializeField] GameObject rightAnchor;
     [SerializeField] GameObject leftAnchor;
-
+    [SerializeField] TMP_Text instructionText;
     [SerializeField] AudioSource hitSFX;
 
 
@@ -129,6 +130,7 @@ public class MassaggioCardiaco : MonoBehaviour
                 if (punchCount >= 3)
                 {
                     logic.NextState();
+                    instructionText.text = "Ottimo lavoro!";
                 }
             }
         }
