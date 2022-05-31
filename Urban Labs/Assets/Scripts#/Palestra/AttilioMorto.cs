@@ -10,9 +10,6 @@ public class AttilioMorto : MonoBehaviour
     [SerializeField] SkinnedMeshRenderer mouthBlend;
     [SerializeField] TMP_Text instructionText;
 
-    Vector3 position0;
-    Vector3 position1;
-    [SerializeField] GameObject head;
 
     GameLogic logic;
     bool mouthCheck = false;
@@ -20,8 +17,6 @@ public class AttilioMorto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // position0 = transform.localRotation;
-        position1 = new Vector3(position0.x, position0.y + 50, position0.z);
         logic = FindObjectOfType<GameLogic>();
         attilio.SetActive(false);
     }
@@ -36,10 +31,12 @@ public class AttilioMorto : MonoBehaviour
         }else if(logic.State == 3 && mouthCheck && breathCheck){
             logic.NextState();
         }
+        
     }
 
     public void OpenMouth(float value)
     {
+        Debug.Log(value);
         mouthBlend.SetBlendShapeWeight(61, value);
         mouthBlend.SetBlendShapeWeight(67, value);
         if (value == 100)
@@ -51,7 +48,7 @@ public class AttilioMorto : MonoBehaviour
     public void CheckMouth()
     {
         mouthCheck = true;
-        instructionText.text = "Ora controlla che stia respirando ancora!";
+        instructionText.text = "Adesso controlla che stia respirando ancora! \n Avvicina l'orecchio alla bocca.";
     }
 
     public void CheckBreath()
@@ -59,21 +56,9 @@ public class AttilioMorto : MonoBehaviour
         if (mouthCheck)
         {
             breathCheck = true;
-            instructionText.text = "Bene adesso fai un massaggio cardiaco";
+            instructionText.text = "Bene ora fai un massaggio cardiaco.\n Prendi la mano sinistra con la destra e spingi forte sul petto 3 volte!";
         }
     }
 
-    public void RotateHead(float value)
-    {
-        Debug.Log(value);
-        head.transform.localEulerAngles = Vector3.Lerp(position0, position1, value);
-        
-    }
 
-    /* 1 ti avvicini
-     * 2 finisci di parlare
-     * 3 finisci il tapis
-     * 4 apri la bocca e controlli il respiro
-     * 5 massaggio
-     */
 }
