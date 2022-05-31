@@ -8,6 +8,7 @@ public class FireScript : MonoBehaviour
     [SerializeField] GameObject firstConversation;
     [SerializeField] GameObject secondConversation;
     [SerializeField] float speed = .01f;
+    [SerializeField] AudioClip fireAudio;
 
     GameLogic gameLogic;
     bool startFire = false;
@@ -37,6 +38,7 @@ public class FireScript : MonoBehaviour
             fire.enableEmission = true;
             fire.Play();
             audio.Play();
+            
         }
     }
 

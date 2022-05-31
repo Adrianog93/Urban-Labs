@@ -14,6 +14,7 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject leftAnchor;
     [SerializeField] TMP_Text instructionText;
     [SerializeField] AudioSource hitSFX;
+    [SerializeField] GameObject buttons;
 
 
     GameLogic logic;
@@ -131,6 +132,7 @@ public class MassaggioCardiaco : MonoBehaviour
                 {
                     logic.NextState();
                     instructionText.text = "Ottimo lavoro!";
+                    buttons.SetActive(true);
                 }
             }
         }
