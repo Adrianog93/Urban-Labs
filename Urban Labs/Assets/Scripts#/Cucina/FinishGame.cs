@@ -14,4 +14,9 @@ public class FinishGame : MonoBehaviour
     {
         SceneManager.LoadScene("Cucina");
     }
+
+    public void TryAgainPalestra()
+    {
+        SceneManager.LoadScene("Palestra");
+    }
 }
