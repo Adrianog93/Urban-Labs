@@ -12,7 +12,9 @@ public class TapisRullantUI : MonoBehaviour
     [SerializeField] GameObject UIButtons;
     [SerializeField] GameObject secondUI;
     [SerializeField] GameObject instructionUI;
- 
+
+    [SerializeField] GameObject freccia;
+  
     GameLogic logic;
 
     int speedValue = 0;
@@ -69,10 +71,12 @@ public class TapisRullantUI : MonoBehaviour
         if (speedValue>0 && inclineValue>0)
         {
             playButton.SetActive(true);
+            freccia.SetActive(true);
         }
         else
         {
             playButton.SetActive(false);
+            freccia.SetActive(false);
         }
     }
 

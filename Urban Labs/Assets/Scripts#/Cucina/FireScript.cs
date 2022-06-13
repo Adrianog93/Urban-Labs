@@ -10,8 +10,10 @@ public class FireScript : MonoBehaviour
     [SerializeField] float speed = .01f;
     [SerializeField] AudioClip fireAudio;
 
+
     GameLogic gameLogic;
     bool startFire = false;
+    bool getBigger = false;
     ParticleSystem fire;
     AudioSource audio;
     EstintoreScript estintore;
@@ -25,7 +27,7 @@ public class FireScript : MonoBehaviour
         audio.Stop();
         boxColl = GetComponent<BoxCollider>();
         gameLogic = FindObjectOfType<GameLogic>();
-        fire = GetComponent<ParticleSystem>();
+        fire = transform.GetChild(2).gameObject.GetComponent<ParticleSystem>();
         fire.enableEmission = false;
     }
 
@@ -38,7 +40,15 @@ public class FireScript : MonoBehaviour
             fire.enableEmission = true;
             fire.Play();
             audio.Play();
-            
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
+            getBigger = true;
+        }
+        if (getBigger)
+        {
+            float size = fire.gameObject.transform.localScale.x +
+                ((speed/5) * Time.deltaTime);
+            fire.gameObject.transform.localScale = new Vector3(size, size, size);
         }
     }
 
@@ -51,11 +61,13 @@ public class FireScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2 && !estintore.HaveSecure)
         {
-
-            Debug.Log("Fuoco");
-            transform.localScale = new Vector3(transform.localScale.x - speed * Time.deltaTime,
-                transform.localScale.y - speed * Time.deltaTime, transform.localScale.z - speed * Time.deltaTime);
-            if (transform.localScale.x < speed)
+            float size = speed * Time.deltaTime;
+            GameObject flame = transform.GetChild(2).gameObject;
+            flame.transform.localScale =
+                new Vector3(flame.transform.localScale.x - size,
+                flame.transform.localScale.y - size,
+                flame.transform.localScale.z - size);
+            if (flame.transform.localScale.x < 0.01)
             {
                 Destroy(gameObject);
                 firstConversation.SetActive(false);

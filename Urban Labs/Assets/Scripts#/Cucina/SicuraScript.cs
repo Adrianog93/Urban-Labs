@@ -7,9 +7,11 @@ public class SicuraScript : MonoBehaviour
     [SerializeField] GameObject estintoreBody;
     SpringJoint joint;
     EstintoreScript estintore;
+    IstruzioniEstintore istruzioni;
     // Start is called before the first frame update
     void Start()
     {
+        istruzioni = FindObjectOfType<IstruzioniEstintore>();
         estintore = estintoreBody.GetComponent<EstintoreScript>();
     }
 
@@ -19,6 +21,7 @@ public class SicuraScript : MonoBehaviour
         float dist = Vector3.Distance(estintoreBody.transform.position, transform.position);
         if (dist > .13f)
         {
+            istruzioni.RimuoviSicura();
             estintore.Secured();
             Destroy(gameObject);
         }

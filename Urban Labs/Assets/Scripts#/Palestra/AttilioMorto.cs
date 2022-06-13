@@ -9,16 +9,20 @@ public class AttilioMorto : MonoBehaviour
     [SerializeField] GameObject pt;
     [SerializeField] SkinnedMeshRenderer mouthBlend;
     [SerializeField] TMP_Text instructionText;
-
-
+    [SerializeField] Animator anim;
+    [SerializeField] GameObject mouthSlider;
+    [SerializeField] GameObject headSlider;
+ 
     GameLogic logic;
     bool mouthCheck = false;
     bool breathCheck = false;
+    bool canRotate = true;
     // Start is called before the first frame update
     void Start()
     {
         logic = FindObjectOfType<GameLogic>();
         attilio.SetActive(false);
+        mouthSlider.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,13 +40,38 @@ public class AttilioMorto : MonoBehaviour
 
     public void OpenMouth(float value)
     {
+        if (value > 100)
+        {
+            value = 100;
+        }
+        if (value < 0)
+        {
+            value = 0;
+        }
         Debug.Log(value);
         mouthBlend.SetBlendShapeWeight(61, value);
         mouthBlend.SetBlendShapeWeight(67, value);
+
         if (value == 100)
         {
             CheckMouth();
         }
+    }
+
+    public void RotateHead(float value)
+    {
+        if (value < 100 && canRotate)
+        {
+            anim.Play("Base Layer.AttilioRotation", 0, value / 100);
+
+        }
+        else
+        {
+            canRotate = false;
+            mouthSlider.SetActive(true);
+            headSlider.SetActive(false);
+        }
+
     }
 
     public void CheckMouth()
@@ -50,6 +79,8 @@ public class AttilioMorto : MonoBehaviour
         mouthCheck = true;
         instructionText.text = "Adesso controlla che stia respirando ancora! \n Avvicina l'orecchio alla bocca.";
     }
+
+
 
     public void CheckBreath()
     {
