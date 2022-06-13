@@ -17,7 +17,7 @@ public class PhoneLogic : MonoBehaviour
     GameLogic gameLogic;
     string phoneText = "";
 
-    
+    IstruzioniEstintore istruzioni;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class PhoneLogic : MonoBehaviour
         gameLogic = FindObjectOfType<GameLogic>();
         phoneNumbers.SetActive(false);
         Debug.Log(SteamVR.instance.hmd_Type);
+        istruzioni = FindObjectOfType<IstruzioniEstintore>();
     }
 
     // Update is called once per frame
@@ -55,6 +56,7 @@ public class PhoneLogic : MonoBehaviour
                 frase.SetActive(false);
                 audioTelefono.clip = audio115;
                 audioTelefono.Play();
+                istruzioni.AttivaIstruzioni();
             }
             else
             {
