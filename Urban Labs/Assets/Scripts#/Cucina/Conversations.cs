@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Conversations : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class Conversations : MonoBehaviour
     private void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
-        UpdateConversation();
+        if (SceneManager.GetActiveScene().name == "Cucina")
+        {
+            UpdateConversation();
+        }
     }
 
     public void UpdateConversation()

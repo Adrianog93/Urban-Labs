@@ -14,7 +14,8 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject leftAnchor;
     [SerializeField] TMP_Text instructionText;
     [SerializeField] AudioSource hitSFX;
-    [SerializeField] GameObject buttons;
+    [SerializeField] GameObject newAttilio;
+    [SerializeField] GameObject attilioSteso;
 
 
     GameLogic logic;
@@ -128,11 +129,12 @@ public class MassaggioCardiaco : MonoBehaviour
                 InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Right);
                 InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Left);
                 punchCount++;
-                if (punchCount >= 3)
+                if (punchCount >= 30)
                 {
                     logic.NextState();
-                    instructionText.text = "Ottimo lavoro!";
-                    buttons.SetActive(true);
+                    instructionText.gameObject.SetActive(false);
+                    newAttilio.SetActive(true);
+                    attilioSteso.SetActive(false);
                 }
             }
         }

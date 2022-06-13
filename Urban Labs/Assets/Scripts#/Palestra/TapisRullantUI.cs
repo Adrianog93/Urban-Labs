@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using BNG;
 
 public class TapisRullantUI : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class TapisRullantUI : MonoBehaviour
     [SerializeField] GameObject UIButtons;
     [SerializeField] GameObject secondUI;
     [SerializeField] GameObject instructionUI;
-
+    [SerializeField] GameObject levaCascoUI;
+ 
     [SerializeField] GameObject freccia;
-  
+
+    BNGPlayerController player;
     GameLogic logic;
 
     int speedValue = 0;
@@ -22,6 +25,7 @@ public class TapisRullantUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<BNGPlayerController>();
         logic = FindObjectOfType<GameLogic>();
         playButton.SetActive(false);
         UIButtons.SetActive(false);
@@ -32,11 +36,17 @@ public class TapisRullantUI : MonoBehaviour
     {
         if (logic.State == 2)
         {
+            freccia.SetActive(true);
             UIButtons.SetActive(true);
         }
         else
         {
             UIButtons.SetActive(false);
+        }
+        float dist = Vector3.Distance(transform.position, player.gameObject.transform.position);
+        if (dist < 3)
+        {
+            freccia.SetActive(false);
         }
         //if (logic.State == 3)
         //{
@@ -71,12 +81,10 @@ public class TapisRullantUI : MonoBehaviour
         if (speedValue>0 && inclineValue>0)
         {
             playButton.SetActive(true);
-            freccia.SetActive(true);
         }
         else
         {
             playButton.SetActive(false);
-            freccia.SetActive(false);
         }
     }
 
@@ -114,8 +122,14 @@ public class TapisRullantUI : MonoBehaviour
         }
     }
 
+    public void Procedi()
+    {
+        levaCascoUI.SetActive(false);
+        secondUI.SetActive(true);
+    }
+
     public void PlayButton()
     {
-        secondUI.SetActive(true);
+        levaCascoUI.SetActive(true);
     }
 }

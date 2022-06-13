@@ -12,6 +12,8 @@ public class AttilioMorto : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] GameObject mouthSlider;
     [SerializeField] GameObject headSlider;
+
+    [SerializeField] GameObject respiroButtons;
  
     GameLogic logic;
     bool mouthCheck = false;
@@ -77,7 +79,8 @@ public class AttilioMorto : MonoBehaviour
     public void CheckMouth()
     {
         mouthCheck = true;
-        instructionText.text = "Adesso controlla che stia respirando ancora! \n Avvicina l'orecchio alla bocca.";
+        respiroButtons.SetActive(true);
+        instructionText.text = "Avvicina l'orecchio alla bocca e verifica rigonfiamento cassa toracica. \nSi gonfia?";
     }
 
 
@@ -86,8 +89,9 @@ public class AttilioMorto : MonoBehaviour
     {
         if (mouthCheck)
         {
+            respiroButtons.SetActive(false);
             breathCheck = true;
-            instructionText.text = "Bene ora fai un massaggio cardiaco.\n Prendi la mano sinistra con la destra e spingi forte sul petto 3 volte!";
+            instructionText.text = "Bene ora fai un massaggio cardiaco.\n Prendi la mano sinistra con la destra e spingi forte sul petto 30 volte!";
         }
     }
 

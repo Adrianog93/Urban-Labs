@@ -19,4 +19,5 @@ public class FinishGame : MonoBehaviour
     {
         SceneManager.LoadScene("Palestra");
     }
+
 }
