@@ -10,6 +10,7 @@ public class IstruzioniEstintore : MonoBehaviour
     [SerializeField] RectTransform ui;
     [SerializeField] GameObject player;
     [SerializeField] GameObject secondUI;
+    [SerializeField] GameObject frecciaEstintore;
  
     bool isGrab = false;
     private void Update()
@@ -26,6 +27,8 @@ public class IstruzioniEstintore : MonoBehaviour
     {
         testo.text = "Bene ora rimuovi la sicura con la mano sinistra";
         isGrab = true;
+        frecciaEstintore.SetActive(false);
+        AttivaIstruzioni();
     }
 
     public void RimuoviSicura()

@@ -17,9 +17,12 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject newAttilio;
     [SerializeField] GameObject attilioSteso;
 
+    [SerializeField] GameObject istruzioniUI;
 
+    ScreenFader fader;
     GameLogic logic;
 
+    bool isfade = false;
 
     bool isAngle = false;
     bool isPos = false;
@@ -27,6 +30,7 @@ public class MassaggioCardiaco : MonoBehaviour
     bool canPunch = false;
 
     int punchCount = 0;
+    float tempo = 2;
 
     float angleDiff;
     SphereCollider myCollider;
@@ -41,6 +45,7 @@ public class MassaggioCardiaco : MonoBehaviour
         PrevPos = transform.position;
         NewPos = transform.position;
         logic = FindObjectOfType<GameLogic>();
+        fader = FindObjectOfType<ScreenFader>();
     }
     private void FixedUpdate()
     {
@@ -58,6 +63,15 @@ public class MassaggioCardiaco : MonoBehaviour
         GetGrab();
         GetAngle();
         GetPos();
+        if (isfade)
+        {
+            tempo -= Time.deltaTime;
+            if (tempo <= 0)
+            {
+                fader.DoFadeOut();
+                isfade = false;
+            }
+        }
     }
     public void GetVelocity()
     {
@@ -135,6 +149,9 @@ public class MassaggioCardiaco : MonoBehaviour
                     instructionText.gameObject.SetActive(false);
                     newAttilio.SetActive(true);
                     attilioSteso.SetActive(false);
+                    fader.DoFadeIn();
+                    isfade = true;
+                    istruzioniUI.SetActive(false);
                 }
             }
         }

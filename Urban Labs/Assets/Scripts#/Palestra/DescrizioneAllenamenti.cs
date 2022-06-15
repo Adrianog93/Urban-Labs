@@ -39,7 +39,7 @@ public class DescrizioneAllenamenti : MonoBehaviour
     {
         choiceUI.SetActive(false);
         descriptionUI.SetActive(true);
-        testo.text = "Allenamento frazionato";
+        testo.text = "Per sviluppare e mantenere la potenza";
 
     }
 
