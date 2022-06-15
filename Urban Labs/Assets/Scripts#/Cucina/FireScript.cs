@@ -8,7 +8,7 @@ public class FireScript : MonoBehaviour
     [SerializeField] GameObject firstConversation;
     [SerializeField] GameObject secondConversation;
     [SerializeField] float speed = .01f;
-    [SerializeField] AudioClip fireAudio;
+    [SerializeField] GameObject fireUI;
 
 
     GameLogic gameLogic;
@@ -47,8 +47,17 @@ public class FireScript : MonoBehaviour
         if (getBigger)
         {
             float size = fire.gameObject.transform.localScale.x +
-                ((speed/5) * Time.deltaTime);
-            fire.gameObject.transform.localScale = new Vector3(size, size, size);
+                ((speed / 5) * Time.deltaTime);
+            if (size > 1.2f)
+            {
+                fireUI.SetActive(true);
+                fire.Stop();
+                audio.Stop();
+            }
+            else
+            {
+               fire.gameObject.transform.localScale = new Vector3(size, size, size);
+            }
         }
     }
 
@@ -61,7 +70,7 @@ public class FireScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2 && !estintore.HaveSecure)
         {
-            float size = speed * Time.deltaTime;
+            float size = (speed * Time.deltaTime) * 1.5f;
             GameObject flame = transform.GetChild(2).gameObject;
             flame.transform.localScale =
                 new Vector3(flame.transform.localScale.x - size,

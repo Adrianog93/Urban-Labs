@@ -9,6 +9,8 @@ public class PhoneLogic : MonoBehaviour
     [SerializeField] GameObject phoneNumbers;
     [SerializeField] Text textNumbers;
     [SerializeField] GameObject frase;
+    [SerializeField] GameObject frecciaTelefono;
+    [SerializeField] GameObject frecciaEstintore;
 
     [SerializeField] AudioClip audioSbagliato;
     [SerializeField] AudioClip audio115;
@@ -32,7 +34,7 @@ public class PhoneLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        frecciaTelefono.SetActive(gameLogic.GetState() == 2);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,12 +53,14 @@ public class PhoneLogic : MonoBehaviour
         {
             if (textNumbers.text == "115")
             {
+                frecciaEstintore.SetActive(true);
                 gameLogic.NextState();
                 phoneNumbers.SetActive(false);
                 frase.SetActive(false);
                 audioTelefono.clip = audio115;
                 audioTelefono.Play();
-                istruzioni.AttivaIstruzioni();
+                //istruzioni.AttivaIstruzioni();
+                frecciaEstintore.SetActive(true);
             }
             else
             {

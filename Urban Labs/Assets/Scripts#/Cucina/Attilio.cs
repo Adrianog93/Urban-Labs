@@ -11,6 +11,7 @@ public class Attilio : MonoBehaviour
     GameLogic gameLogic;
 
     bool start = false;
+    bool startDescription = false;
     Vector3 AttilioRotation;
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,13 @@ public class Attilio : MonoBehaviour
         }
         if (gameLogic.GetState() == 1)
         {
-            buttons.SetActive(true);
-            choices.SetActive(true);
+            if (!startDescription)
+            {
+                startDescription = true;
+                buttons.SetActive(true);
+                choices.SetActive(true);
+            }
+            
         }
         else
         {

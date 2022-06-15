@@ -14,11 +14,15 @@ public class MassaggioCardiaco : MonoBehaviour
     [SerializeField] GameObject leftAnchor;
     [SerializeField] TMP_Text instructionText;
     [SerializeField] AudioSource hitSFX;
-    [SerializeField] GameObject buttons;
+    [SerializeField] GameObject newAttilio;
+    [SerializeField] GameObject attilioSteso;
 
+    [SerializeField] GameObject istruzioniUI;
 
+    ScreenFader fader;
     GameLogic logic;
 
+    bool isfade = false;
 
     bool isAngle = false;
     bool isPos = false;
@@ -26,6 +30,7 @@ public class MassaggioCardiaco : MonoBehaviour
     bool canPunch = false;
 
     int punchCount = 0;
+    float tempo = 2;
 
     float angleDiff;
     SphereCollider myCollider;
@@ -40,6 +45,7 @@ public class MassaggioCardiaco : MonoBehaviour
         PrevPos = transform.position;
         NewPos = transform.position;
         logic = FindObjectOfType<GameLogic>();
+        fader = FindObjectOfType<ScreenFader>();
     }
     private void FixedUpdate()
     {
@@ -57,6 +63,15 @@ public class MassaggioCardiaco : MonoBehaviour
         GetGrab();
         GetAngle();
         GetPos();
+        if (isfade)
+        {
+            tempo -= Time.deltaTime;
+            if (tempo <= 0)
+            {
+                fader.DoFadeOut();
+                isfade = false;
+            }
+        }
     }
     public void GetVelocity()
     {
@@ -128,11 +143,15 @@ public class MassaggioCardiaco : MonoBehaviour
                 InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Right);
                 InputBridge.Instance.VibrateController(20, 20, .2f, ControllerHand.Left);
                 punchCount++;
-                if (punchCount >= 3)
+                if (punchCount >= 30)
                 {
                     logic.NextState();
-                    instructionText.text = "Ottimo lavoro!";
-                    buttons.SetActive(true);
+                    instructionText.gameObject.SetActive(false);
+                    newAttilio.SetActive(true);
+                    attilioSteso.SetActive(false);
+                    fader.DoFadeIn();
+                    isfade = true;
+                    istruzioniUI.SetActive(false);
                 }
             }
         }
