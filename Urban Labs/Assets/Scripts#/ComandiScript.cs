@@ -63,12 +63,15 @@ public class ComandiScript : MonoBehaviour
     public void NextButton()
     {
         index++;
-        if (index > imgs.Length)
+        if (index >= imgs.Length)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        img.sprite = imgs[index];
-        button.SetActive(false);
+        else {
+            img.sprite = imgs[index];
+            button.SetActive(false);
+        }
+        
 
     }
 }
