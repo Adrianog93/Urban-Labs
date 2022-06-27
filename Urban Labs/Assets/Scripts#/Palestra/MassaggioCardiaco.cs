@@ -54,7 +54,6 @@ public class MassaggioCardiaco : MonoBehaviour
         //{
         //    Debug.Log(ObjVelocity.y);
         //}
-        
     }
 
     // Update is called once per frame
@@ -135,7 +134,7 @@ public class MassaggioCardiaco : MonoBehaviour
         {
             isPos = true;
         }
-        if (other.gameObject.name == "Chest" && ObjVelocity.y < -1f && canPunch)
+        if (other.gameObject.name == "Chest" && ObjVelocity.y < -.5f && canPunch)
         {
             if (logic.State == 4)
             {
