@@ -8,6 +8,7 @@ namespace BNG {
     /// </summary>
     public class LookAtTransform : MonoBehaviour {
 
+        [SerializeField] bool isSimpleRotation = false;
         /// <summary>
         /// The object to look at
         /// </summary>
@@ -40,7 +41,11 @@ namespace BNG {
 
         void lookAt() {
 
-            if (LookAt != null) {
+            if (isSimpleRotation)
+            {
+                transform.LookAt(LookAt);
+            }
+            else if (LookAt != null) {
 
                 if (UseLerp) {
                     Quaternion rot = Quaternion.LookRotation(LookAt.position - transform.position);

@@ -48,7 +48,7 @@ public class FireScript : MonoBehaviour
         {
             float size = fire.gameObject.transform.localScale.x +
                 ((speed / 5) * Time.deltaTime);
-            if (size > 1.2f)
+            if (size > 2.1f)
             {
                 fireUI.SetActive(true);
                 fire.Stop();
@@ -70,7 +70,7 @@ public class FireScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Schiuma" && gameLogic.State >= 2 && !estintore.HaveSecure)
         {
-            float size = (speed * Time.deltaTime) * 1.5f;
+            float size = (speed * Time.deltaTime) * 1.7f;
             GameObject flame = transform.GetChild(2).gameObject;
             flame.transform.localScale =
                 new Vector3(flame.transform.localScale.x - size,
