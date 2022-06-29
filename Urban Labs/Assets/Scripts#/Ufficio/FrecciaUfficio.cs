@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrecciaUfficio : MonoBehaviour
 {
     [SerializeField] Transform[] targetPositions;
-    [SerializeField] int positionIndex = 0;
+    int pos = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +15,8 @@ public class FrecciaUfficio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = targetPositions[positionIndex].position;
+        pos = FindObjectOfType<UfficioGameLogic>().GetDialogue();
+        transform.position = targetPositions[pos].position;
     }
 
-    public void NextPos()
-    {
-        positionIndex++;
-    }
 }

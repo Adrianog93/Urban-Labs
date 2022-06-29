@@ -32,7 +32,307 @@ ModelImporter:
   - first:
       74: 3638250478398259370
     second: Struttura stanza uffici |Porta|Porta|Porta|Porta|Grip|Porta|Grip|Porta|Porta|Porta|Grip|
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alluminio_
+    second: {fileID: 2100000, guid: f2a25657d6cc0fa42b80a8c24c726480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Azzurro_
+    second: {fileID: 2100000, guid: 12df554375064734fbe47269e33fb4d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Battiscopa
+    second: {fileID: 2100000, guid: a5f9c4064f7e3c94d86ef12b1012bcc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bianco_
+    second: {fileID: 2100000, guid: a16f2a8c67b768c45bff0f481dda0384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cestino Nero_
+    second: {fileID: 2100000, guid: ca5c2570ddd1f3f4e90a101fab47d6fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheetah
+    second: {fileID: 2100000, guid: d7de18bb63c85d84a9d6dd64dab9d6a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crema
+    second: {fileID: 2100000, guid: cbb7067d1f951f244bda733114b5cb13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DIvani_
+    second: {fileID: 2100000, guid: 20bf6ae133d151e4fb11c6c77ca9f04a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial
+    second: {fileID: 2100000, guid: 5486e8db4b461eb458b6d5da8d4d1f4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Distributore Acqua
+    second: {fileID: 2100000, guid: d7a0965e4cfe1464c99f46e2d47e0763, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faldoni rossi_
+    second: {fileID: 2100000, guid: dbef4f02d6b893c4185dbcf65aa4ec61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faldoni verdi_
+    second: {fileID: 2100000, guid: 3b9596f10e15e30428f7eefcde54561f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Foto
+    second: {fileID: 2100000, guid: 176692d913513674c90a54dad03f0444, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Foto.001
+    second: {fileID: 2100000, guid: cca9d1952020e8e44a7293e905a2b2bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fronte
+    second: {fileID: 2100000, guid: 95688ec6166eed74982f4a43925cb805, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Giallo
+    second: {fileID: 2100000, guid: 351bccb6fd03c7948b495678be6038b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grigio_
+    second: {fileID: 2100000, guid: 554150c179984b4449da314328c0686e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyboard_Keys
+    second: {fileID: 2100000, guid: 350009c145effb344b7938e7d46f84c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legno Scuro .001
+    second: {fileID: 2100000, guid: d29eea83be86f624890a37b6c7b34c44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legno Scuro_
+    second: {fileID: 2100000, guid: 20520a4f7e134f24eb4867d956e4dc83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legno_
+    second: {fileID: 2100000, guid: 8652fef5d41146248b9414f6901d825b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lumetti
+    second: {fileID: 2100000, guid: 7790f5950ff728a4c93e5e15e66bf9da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 35fcad20d04e54445a74783e3ca1ceb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 2f428135f441f5e41b3e57cb158b839f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 75ae763987dfbff45afff7b9767dc297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 8f7e656c229b357409692d4fc1ccb74c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monitor
+    second: {fileID: 2100000, guid: df505c6ef56235e43893296ddac99a00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Munnezz
+    second: {fileID: 2100000, guid: e1fa375c1d44f94408df8b9f593d062d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muri_
+    second: {fileID: 2100000, guid: 850ea0944fc2d6140a899e669440d52b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeapolitanGeographic
+    second: {fileID: 2100000, guid: c95f81ac129ac22419ed39b8ff21dd06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nero_
+    second: {fileID: 2100000, guid: f7d191a5498b69848b429b8b2a96a724, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orologio
+    second: {fileID: 2100000, guid: ff640ec05a7002546bf7bf20267ea29c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pavimento 1
+    second: {fileID: 2100000, guid: 6354d8addd5eab0468bbb7a67c805791, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastica nera_
+    second: {fileID: 2100000, guid: 9bb891765a419c7438f45dddca85b4ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porta intermedia_
+    second: {fileID: 2100000, guid: d30264063954e314297778462a9a9bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: R_Mouse
+    second: {fileID: 2100000, guid: 217ee32aacb86c741aeee6b9ee97cf62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rosso
+    second: {fileID: 2100000, guid: cc0f52b387124be4384e8a04e804226b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RossoChiaro
+    second: {fileID: 2100000, guid: ff9732184298d244dbfec7fcf5812513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stoloik_metall
+    second: {fileID: 2100000, guid: 4868de6fe2953ab4182c2fe9420ae365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tappeto
+    second: {fileID: 2100000, guid: 6b8e98217b8dc424097edaa61cd8adf9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vaso
+    second: {fileID: 2100000, guid: 81208d4442fe8ec4ab59cf2971e34656, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base
+    second: {fileID: 2100000, guid: 177f84b2aa8385944a178245873d9eab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 1
+    second: {fileID: 2100000, guid: 8fe5f8a1cdb4b2545bfabf11e5eef29d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 2
+    second: {fileID: 2100000, guid: 9aae5f6770dfd714d95394cb476c8393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 3
+    second: {fileID: 2100000, guid: 4830748b569286642942d20a1a54d6db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 4
+    second: {fileID: 2100000, guid: 362e741fde186b642853d804be2d5751, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 5
+    second: {fileID: 2100000, guid: f1f19beb2d4b38145abdf5eb7ce5b038, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 6
+    second: {fileID: 2100000, guid: 0ad01d150aa19644897b997f86127837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 7
+    second: {fileID: 2100000, guid: 8382d2dab9aa3904e859d04a98f069b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fascione 8
+    second: {fileID: 2100000, guid: cac96d3ecff8d4e429ba1735b06451da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass_tor_id3
+    second: {fileID: 2100000, guid: a8bded718edf26b44a79daf1e648c190, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logo
+    second: {fileID: 2100000, guid: b71b1c9657b92f84bbbfbe9d724003f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: noise
+    second: {fileID: 2100000, guid: ef2ef755000bf0e4390913847150af4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oro2
+    second: {fileID: 2100000, guid: 5c18df28a71683748868346955ea0b50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rules1
+    second: {fileID: 2100000, guid: 137f73c09383f59429370e775057336a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rules2
+    second: {fileID: 2100000, guid: 35842c0962c16d549a03a7ff546b1f99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rules3
+    second: {fileID: 2100000, guid: 3e5d707a0aeba5243ad9abb090b8635d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rules4
+    second: {fileID: 2100000, guid: c36acc747b7633445a37e4b0cfe5c521, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: strap
+    second: {fileID: 2100000, guid: 814a3b2204ddc80428f0a3804724d55a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: targa urban
+    second: {fileID: 2100000, guid: 8e57e3ae4de9dc44fa7ce51628c54b7e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
